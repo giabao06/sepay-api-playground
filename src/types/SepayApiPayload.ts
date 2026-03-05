@@ -2,10 +2,10 @@ import * as z from "zod";
 
 // https://docs.sepay.vn/tich-hop-webhooks.html
 
-module.exports = z.object({
+export const PayloadObject = z.object({
     id: z.int(),
     gateway: z.string(),
-    transactionDate: z.date(),
+    transactionDate: z.string(),
     accountNumber: z.string(),
     code: z.string().nullable(), // This code is used to further filter transactions
     content: z.string(),
@@ -15,5 +15,5 @@ module.exports = z.object({
     subAccount: z.string().nullable(), // Usage not known
     referenceCode: z.string().nullable(), // Transaction Reference code?
     description: z.string() // SMS content?
-})
+});
 
