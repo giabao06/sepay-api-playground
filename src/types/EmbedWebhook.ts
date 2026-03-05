@@ -3,6 +3,6 @@ import { Embed } from "./Embed";
 
 export const EmbedWebhook = z.object({
     username: z.string(),
-    avatar_url: z.string().nullable(),
-    embeds: [Embed],
+    avatar_url: z.string().optional(),
+    embeds: z.array(Embed),
 })
