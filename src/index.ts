@@ -1,6 +1,9 @@
 import { Elysia } from "elysia";
 import { handlePayment } from "./handlers/paymentHandler";
 import { PayloadObject } from "./types/SepayApiPayload";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const app =
     new Elysia()
